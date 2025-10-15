@@ -15,7 +15,7 @@ def ingest_data(file_path: str) -> List['Record']:
     """
     records = []
     
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8-sig') as f:
         reader = csv.DictReader(f)
         
         for row in reader:
